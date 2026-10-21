@@ -1,0 +1,213 @@
+.dockerignore
+  s_2ac372c03863e3::t_9904f26fed77b1 1-9
+.env.example
+  s_2ac372c03863e3::t_2f6b7b8b4b5933 1-46
+.github/workflows/desktop.yml
+  s_2ac372c03863e3::t_c7557e57268a13 1-35
+.gitignore
+  s_2ac372c03863e3::t_09d74e0bd75eb7 1-8
+DESKTOP.md
+  s_2ac372c03863e3::t_5839ed61d444c7 1-66
+Dockerfile
+  s_2ac372c03863e3::t_80baf6ee9871ca 1-34
+README.md
+  s_2ac372c03863e3::t_ab441045c61104 1-79
+desktop/afterPack.cjs
+  s_2ac372c03863e3::t_82cb3cbc57c7ba 1-13
+desktop/build.sh
+  s_2ac372c03863e3::t_79b11af468fbe5 1-65
+desktop/build/icon.svg
+  s_2ac372c03863e3::t_96f4e96477162d 1
+desktop/installer.nsi
+  s_2ac372c03863e3::t_aaf640bf88976c 1-77
+desktop/main.cjs
+  s_2ac372c03863e3::t_0fff8527037415 1-106
+desktop/package-lock.json
+  s_2ac372c03863e3::t_881f1beeea5853 1-3649
+desktop/package.json
+  s_2ac372c03863e3::t_52d5e9b34c2f95 1-95
+desktop/set-exe-icon.cjs
+  s_2ac372c03863e3::t_e229d964070829 1-26
+docker-compose.yml
+  s_2ac372c03863e3::t_88bc8a6fa3eddc 1-57
+next-env.d.ts
+  s_2ac372c03863e3::t_b46ef632fe8a1a 1-7
+next.config.ts
+  s_2ac372c03863e3::t_3999f7bf8a99eb 1-12
+package-lock.json
+  s_2ac372c03863e3::t_b26c5c36d9135a 1-4185
+package.json
+  s_2ac372c03863e3::t_84102747629c06 1-45
+postcss.config.mjs
+  s_2ac372c03863e3::t_58ae21852bc118 1
+scripts/admin-reset.mjs
+  s_2ac372c03863e3::t_394c46fa94bb87 1-15
+scripts/kb-build.mjs
+  s_2ac372c03863e3::t_98141fbfb45a27 1-255
+searxng/settings.yml
+  s_2ac372c03863e3::t_2f16d223f3c5dc 1-17
+src/app/account/page.tsx
+  s_2ac372c03863e3::t_8036257f501c44 1-12
+src/app/activate/page.tsx
+  s_2ac372c03863e3::t_1acb097624957a 1-12
+src/app/admin/page.tsx
+  s_2ac372c03863e3::t_0546e19d5d0465 1-14
+src/app/api/admin/library/route.ts
+  s_2ac372c03863e3::t_7132fb86bfba59 1-62
+src/app/api/admin/licenses/route.ts
+  s_2ac372c03863e3::t_2cfb1859b8c842 1-48
+src/app/api/admin/local/route.ts
+  s_2ac372c03863e3::t_babe6805b75692 1-42
+src/app/api/admin/models/route.ts
+  s_2ac372c03863e3::t_83731fdd7467f9 1-57
+src/app/api/admin/plans/route.ts
+  s_2ac372c03863e3::t_9339fdfdcbb77b 1-57
+src/app/api/admin/provider-models/route.ts
+  s_2ac372c03863e3::t_1358a23bc84b50 1-14
+src/app/api/admin/settings/route.ts
+  s_2ac372c03863e3::t_64bafb0d2e8790 1-69
+src/app/api/admin/stats/route.ts
+  s_2ac372c03863e3::t_9a19cfd0dbf783 1-24
+src/app/api/admin/users/route.ts
+  s_2ac372c03863e3::t_5e2c65a8716342 1-48
+src/app/api/auth/login/route.ts
+  s_2ac372c03863e3::t_b4ce3d3550cb85 1-17
+src/app/api/auth/logout/route.ts
+  s_2ac372c03863e3::t_0eb1bd5b212727 1-6
+src/app/api/auth/register/route.ts
+  s_2ac372c03863e3::t_14fa362843f5f5 1-27
+src/app/api/billing/checkout/route.ts
+  s_2ac372c03863e3::t_849fd953b21cfe 1-12
+src/app/api/billing/portal/route.ts
+  s_2ac372c03863e3::t_aeb22e1a4b57ec 1-11
+src/app/api/billing/webhook/route.ts
+  s_2ac372c03863e3::t_0dbd77942f8be6 1-12
+src/app/api/chat/route.ts
+  s_2ac372c03863e3::t_17b6154927166f 1-36
+src/app/api/conversations/[id]/route.ts
+  s_2ac372c03863e3::t_494a5aa485a364 1-39
+src/app/api/conversations/route.ts
+  s_2ac372c03863e3::t_254422fc3db32d 1-16
+src/app/api/desktop/license/route.ts
+  s_2ac372c03863e3::t_852964733bc10b 1-39
+src/app/api/desktop/llm/v1/chat/completions/route.ts
+  s_2ac372c03863e3::t_32bdf3661d17c6 1-10
+src/app/api/files/[id]/route.ts
+  s_2ac372c03863e3::t_7de800eaffb257 1-23
+src/app/api/image/route.ts
+  s_2ac372c03863e3::t_7fa85ab690f5b6 1-72
+src/app/api/library/route.ts
+  s_2ac372c03863e3::t_c26c650e55ea2d 1-23
+src/app/api/license/activate/route.ts
+  s_2ac372c03863e3::t_2686e174dc40d3 1-16
+src/app/api/license/mine/route.ts
+  s_2ac372c03863e3::t_f7fc565c3eeca1 1-29
+src/app/api/me/route.ts
+  s_2ac372c03863e3::t_69db001d0beaa1 1-55
+src/app/api/stt/route.ts
+  s_2ac372c03863e3::t_164dd536f79d41 1-43
+src/app/api/tts/route.ts
+  s_2ac372c03863e3::t_a7fb20224ce382 1-41
+src/app/api/upload/route.ts
+  s_2ac372c03863e3::t_9726d59f4beb6c 1-19
+src/app/chat/page.tsx
+  s_2ac372c03863e3::t_acd34e36235d52 1-11
+src/app/globals.css
+  s_2ac372c03863e3::t_4bc797a241afe1 1-110
+src/app/images/page.tsx
+  s_2ac372c03863e3::t_e26365a465cd26 1-12
+src/app/layout.tsx
+  s_2ac372c03863e3::t_8dd22445069033 1-23
+src/app/library/page.tsx
+  s_2ac372c03863e3::t_ee72a6c5f96759 1-12
+src/app/login/page.tsx
+  s_2ac372c03863e3::t_43e3f26c5c7aa0 1-19
+src/app/page.tsx
+  s_2ac372c03863e3::t_031d98fc866e73 1-86
+src/app/pricing/page.tsx
+  s_2ac372c03863e3::t_e0dc198894f876 1-27
+src/app/register/page.tsx
+  s_2ac372c03863e3::t_ad785e57b092c2 1-19
+src/components/AccountApp.tsx
+  s_2ac372c03863e3::t_2e2f3fd402ad01 1-154
+src/components/ActivateApp.tsx
+  s_2ac372c03863e3::t_c28a6e21bdb0c4 1-53
+src/components/AdminApp.tsx
+  s_2ac372c03863e3::t_51a35a08bedaf3 1-651
+src/components/AppShell.tsx
+  s_2ac372c03863e3::t_9683d8d641fe94 1-124
+src/components/AuthForm.tsx
+  s_2ac372c03863e3::t_8d90916d1f3040 1-42
+src/components/ChatApp.tsx
+  s_2ac372c03863e3::t_8f8218ab9a2667 1-557
+src/components/Icons.tsx
+  s_2ac372c03863e3::t_c27c007251fbbf 1-42
+src/components/ImagesApp.tsx
+  s_2ac372c03863e3::t_9ece328439d5dd 1-100
+src/components/LibraryApp.tsx
+  s_2ac372c03863e3::t_22b45cbe0c126f 1-102
+src/components/Markdown.tsx
+  s_2ac372c03863e3::t_fe3c41e720718e 1-67
+src/components/Pricing.tsx
+  s_2ac372c03863e3::t_f76d6ed3aded2c 1-37
+src/lib/arabic.mjs
+  s_2ac372c03863e3::t_118a4ec0eda766 1-97
+src/lib/auth.ts
+  s_2ac372c03863e3::t_1bb424729e7a65 1-147
+src/lib/billing.ts
+  s_2ac372c03863e3::t_30754292ed8650 1-136
+src/lib/chat.ts
+  s_2ac372c03863e3::t_0754e7200a9367 1-370
+src/lib/client.ts
+  s_2ac372c03863e3::t_be0155a0b004f6 1-32
+src/lib/config.ts
+  s_2ac372c03863e3::t_7d49500885c672 1-91
+src/lib/db.ts
+  s_2ac372c03863e3::t_acf530996e0155 1-231
+src/lib/demo.ts
+  s_2ac372c03863e3::t_2c6f10e01f4149 1-80
+src/lib/desktop-llm.ts
+  s_2ac372c03863e3::t_a0dd0ab58e3d03 1-181
+src/lib/desktop-models.ts
+  s_2ac372c03863e3::t_bc4bef150e9c3c 1-134
+src/lib/desktop.ts
+  s_2ac372c03863e3::t_ae20ec60740627 1-79
+src/lib/files.ts
+  s_2ac372c03863e3::t_638ffb8d748886 1-58
+src/lib/format.ts
+  s_2ac372c03863e3::t_0ae129bcfb2952 1-5
+src/lib/library.ts
+  s_2ac372c03863e3::t_22147d70f3cc32 1-188
+src/lib/license-server.ts
+  s_2ac372c03863e3::t_18ecb27b639ee8 1-99
+src/lib/license.ts
+  s_2ac372c03863e3::t_091765d2cacaa6 1-65
+src/lib/local.ts
+  s_2ac372c03863e3::t_057c9a4ba188d6 1-150
+src/lib/models.ts
+  s_2ac372c03863e3::t_4c8766d81f3102 1-199
+src/lib/prompts.ts
+  s_2ac372c03863e3::t_b72f62a334264c 1-45
+src/lib/ratelimit.ts
+  s_2ac372c03863e3::t_2df8f20e8a254c 1-18
+src/lib/sqlite.mjs
+  s_2ac372c03863e3::t_67fcb680a56eef 1-41
+tsconfig.json
+  s_2ac372c03863e3::t_8672878ddc9fc1 1-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "017ebdb2a07d68b29dc27fe1fff960f503a723de",
+  "prompts": {},
+  "sessions": {
+    "s_2ac372c03863e3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "30a098c1-bbdf-43b2-b8ec-06893a80a3e0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "farouq abou umar <farouqabouumar@farouqs-iMac.local>"
+    }
+  }
+}
