@@ -1,0 +1,57 @@
+# بصيرة — منصة ذكاء اصطناعي مستقلة بالكامل، تعمل على Synology NAS
+# (Container Manager ← المشروع ← إنشاء، والمسار مجلد هذا الملف)
+#
+# كل الخدمات هنا تعمل على جهازك؛ لا اتصال بأي شركة ذكاء اصطناعي.
+
+services:
+  # المنصة نفسها (الموقع، الحسابات، الاشتراكات، المكتبة الشرعية)
+  basira:
+    build: .
+    image: basira:latest
+    container_name: basira
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - LOCAL_AI_URL=http://ollama:11434
+      - SEARXNG_URL=http://searxng:8080
+      - WHISPER_URL=http://whisper:8000
+    ports:
+      - "3100:3000"          # المنفذ الداخلي على NAS؛ الوكيل العكسي يحوّل إليه من ٤٤٣
+    volumes:
+      - ./data:/data         # القاعدة والملفات والمكتبة (أدرجه في النسخ الاحتياطي)
+      # اختياري وأسرع لبناء المكتبة: بيانات الشاملة على NAS للقراءة فقط
+      # - /volume1/downloads/shamela:/shamela:ro
+    depends_on:
+      - ollama
+      - searxng
+
+  # محرّك النماذج المفتوحة (Qwen، gpt-oss، Gemma…) على معالج الجهاز
+  ollama:
+    image: ollama/ollama:latest
+    container_name: basira-ollama
+    restart: unless-stopped
+    environment:
+      - OLLAMA_CONTEXT_LENGTH=16384   # طول السياق: يكفي للقسم الشرعي مع نصوص المكتبة
+      - OLLAMA_KEEP_ALIVE=24h         # يبقي النموذج في الذاكرة فلا يتأخر أول رد
+      - OLLAMA_NUM_PARALLEL=1         # طلب واحد في كل لحظة (المعالج لا يحتمل أكثر)
+      - OLLAMA_MAX_LOADED_MODELS=1
+    volumes:
+      - ./ollama:/root/.ollama        # النماذج المنزَّلة (عدة غيغابايتات)
+
+  # محرك بحث تستضيفه أنت (يجمع النتائج من محركات البحث العامة، بلا ذكاء اصطناعي خارجي)
+  searxng:
+    image: searxng/searxng:latest
+    container_name: basira-search
+    restart: unless-stopped
+    environment:
+      - SEARXNG_SECRET=${SEARXNG_SECRET:-change-me-to-random}
+    volumes:
+      - ./searxng/settings.yml:/etc/searxng/settings.yml:ro
+
+  # تفريغ الكلام إلى نص (Whisper) على الجهاز — اختياري؛ احذف هذا القسم إن لم تحتجه
+  whisper:
+    image: ghcr.io/speaches-ai/speaches:latest-cpu
+    container_name: basira-whisper
+    restart: unless-stopped
+    volumes:
+      - ./whisper:/home/ubuntu/.cache/huggingface/hub

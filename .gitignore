@@ -1,0 +1,8 @@
+node_modules
+.next
+data
+.env
+*.tsbuildinfo
+desktop/node_modules
+desktop/app
+desktop/dist

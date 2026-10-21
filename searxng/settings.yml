@@ -1,0 +1,17 @@
+# إعدادات محرك البحث المحلي (SearXNG) لبصيرة
+use_default_settings: true
+general:
+  instance_name: "basira-search"
+search:
+  safe_search: 1
+  formats:
+    - html
+    - json
+server:
+  # يُستبدل من متغير البيئة SEARXNG_SECRET في docker-compose
+  secret_key: "change-me"
+  limiter: false
+  image_proxy: false
+  public_instance: false
+ui:
+  default_locale: "ar"

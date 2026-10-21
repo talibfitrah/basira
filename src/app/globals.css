@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+@import "@fontsource/amiri/400.css";
+@import "@fontsource/amiri/700.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-serif: "Amiri", "Traditional Arabic", serif;
+  --color-paper: #f7f4ee;
+  --color-card: #fffdf9;
+  --color-ink: #1d2320;
+  --color-muted: #6b716c;
+  --color-line: #e4ded3;
+  --color-brand: #1f5c4a;
+  --color-brand-2: #2c7a62;
+  --color-brand-soft: #e3efe9;
+  --color-gold: #a8823c;
+  --color-danger: #b23b3b;
+}
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+  --color-paper: #121614;
+  --color-card: #1a201d;
+  --color-ink: #e9ece9;
+  --color-muted: #9aa39d;
+  --color-line: #2c3430;
+  --color-brand: #5fb79a;
+  --color-brand-2: #7cc9ae;
+  --color-brand-soft: #1f2e28;
+  --color-gold: #d0ab62;
+  --color-danger: #e57373;
+}
+
+html, body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+body { -webkit-font-smoothing: antialiased; }
+
+@layer components {
+/* أزرار وحقول مشتركة */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+  border-radius: .75rem; padding: .55rem 1.1rem; font-weight: 600; font-size: .95rem;
+  transition: background .15s, opacity .15s, border-color .15s; white-space: nowrap;
+}
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-primary { background: var(--color-brand); color: #fff; }
+.dark .btn-primary { color: #0e1512; }
+.btn-primary:hover:not(:disabled) { background: var(--color-brand-2); }
+.btn-ghost { border: 1px solid var(--color-line); background: var(--color-card); }
+.btn-ghost:hover:not(:disabled) { border-color: var(--color-brand); }
+.btn-danger { color: var(--color-danger); border: 1px solid var(--color-line); }
+.input {
+  width: 100%; border: 1px solid var(--color-line); background: var(--color-card);
+  border-radius: .75rem; padding: .6rem .85rem; outline: none; font-size: .95rem;
+}
+.input:focus { border-color: var(--color-brand); box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-brand) 18%, transparent); }
+.card { background: var(--color-card); border: 1px solid var(--color-line); border-radius: 1rem; }
+.label { font-size: .85rem; color: var(--color-muted); margin-bottom: .3rem; display: block; }
+.chip {
+  display: inline-flex; align-items: center; gap: .3rem; font-size: .8rem; padding: .25rem .65rem;
+  border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-card);
+}
+.chip[data-on="true"] { background: var(--color-brand-soft); border-color: var(--color-brand); color: var(--color-brand); }
+
+}
+
+/* نص الردود */
+.prose-ar { line-height: 1.95; font-size: 1.02rem; overflow-wrap: anywhere; }
+.prose-ar p { margin: .55em 0; }
+.prose-ar h1, .prose-ar h2, .prose-ar h3 { font-weight: 700; margin: 1em 0 .4em; line-height: 1.5; }
+.prose-ar h1 { font-size: 1.35rem; } .prose-ar h2 { font-size: 1.2rem; } .prose-ar h3 { font-size: 1.07rem; }
+.prose-ar ul, .prose-ar ol { padding-inline-start: 1.4em; margin: .5em 0; }
+.prose-ar ul { list-style: disc; } .prose-ar ol { list-style: arabic-indic; }
+.prose-ar li { margin: .2em 0; }
+.prose-ar a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 3px; }
+.prose-ar blockquote { border-inline-start: 3px solid var(--color-gold); padding-inline-start: .9em; color: var(--color-muted); margin: .7em 0; }
+.prose-ar table { border-collapse: collapse; margin: .8em 0; display: block; overflow-x: auto; max-width: 100%; }
+.prose-ar th, .prose-ar td { border: 1px solid var(--color-line); padding: .35em .7em; text-align: start; }
+.prose-ar th { background: var(--color-brand-soft); }
+.prose-ar code:not(pre code) { background: var(--color-brand-soft); padding: .05em .35em; border-radius: .35em; font-size: .9em; direction: ltr; unicode-bidi: isolate; }
+.prose-ar pre { direction: ltr; text-align: left; }
+.prose-ar hr { border-color: var(--color-line); margin: 1em 0; }
+.ayah { font-family: var(--font-serif); font-size: 1.3rem; line-height: 2.2; }
+
+/* تلوين الشيفرة (مبني على highlight.js) */
+.hljs { color: #e6edf3; }
+.hljs-keyword, .hljs-selector-tag, .hljs-built_in { color: #ff7b72; }
+.hljs-string, .hljs-attr { color: #a5d6ff; }
+.hljs-number, .hljs-literal { color: #79c0ff; }
+.hljs-comment { color: #8b949e; font-style: italic; }
+.hljs-title, .hljs-function { color: #d2a8ff; }
+.hljs-variable, .hljs-params { color: #ffa657; }
+
+.scroll-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 6px; }
+
+@keyframes blink { 50% { opacity: 0; } }
+.caret::after { content: "▍"; animation: blink 1s steps(1) infinite; color: var(--color-brand); margin-inline-start: 2px; }
